@@ -1,8 +1,9 @@
+import _ from 'lodash';
+
 function component() {
         const element = document.createElement('div');
 
-        // Lodash, currently included via script, is require for this line to work
-        element.innerTHML = _.join(['Hello', 'webpack'], ' ');
+        element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
         return element;
 }
