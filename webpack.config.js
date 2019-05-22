@@ -38,7 +38,16 @@ module.exports = {
             {
                 test: /\.(jpg|png|gif|svg)$/,
                 use: [
-                    'file-loader'
+                    {
+                        /**
+                         * Return a Data URL if the file is smaller than byte limit
+                         * Fallback default 'file-loader'
+                         */
+                        loader: 'url-loader',
+                        options: {
+                            limit: 8192
+                        }
+                    }
                 ]
             },
         ]
