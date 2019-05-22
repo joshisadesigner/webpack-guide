@@ -10,7 +10,8 @@ module.exports = {
         rules: [
             {
                 test: /\.css$/,
-                use: [ 
+                use: [
+
                     {
                         loader: 'style-loader',
                         /**
@@ -31,9 +32,15 @@ module.exports = {
                          * the CSS modules will be generated as Blobs
                          */
                         options: { sourceMap: true }
-                    }
+                    },
                 ]
-            }
+            },
+            {
+                test: /\.(jpg|png|gif|svg)$/,
+                use: [
+                    'file-loader'
+                ]
+            },
         ]
     }
 }
