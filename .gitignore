@@ -1,5 +1,5 @@
 # Production
-dist/
+/dist
 
 # Logs
 logs
